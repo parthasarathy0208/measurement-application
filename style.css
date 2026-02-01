@@ -2,11 +2,17 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     background: linear-gradient(135deg, #667eea, #764ba2);
     margin: 0;
-    padding: 0;
+
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
@@ -20,10 +26,38 @@ body {
     box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Top buttons */
+/* Navigation buttons (TOP / PANT) */
 .buttons {
-    text-align: center;
-    margin: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 12px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 5px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.top-btn {
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+}
+
+.pant-btn {
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+}
+
+.nav-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 7px 15px rgba(0,0,0,0.4);
 }
 
 /* Card layout */
@@ -31,18 +65,24 @@ body {
     display: none;
     background: white;
     padding: 18px;
-    margin: 15px auto;
+    margin: auto; /* center vertically and horizontally */
     width: 90%;
-    max-width: 420px;
+    max-width: 380px;
     border-radius: 16px;
     box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
-    animation: fadeIn 0.4s ease-in-out;
+    animation: slideUp 0.4s ease;
 }
 
 /* Animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Row */
@@ -54,7 +94,7 @@ body {
 
 /* Label */
 .row label {
-    width: 40%;
+    width: 45%;
     font-weight: 600;
     font-size: 14px;
     color: #333;
@@ -62,11 +102,11 @@ body {
 
 /* Input */
 .row input {
-    width: 60%;
-    padding: 9px;
+    width: 55%;
+    padding: 10px;
     border-radius: 10px;
     border: 1px solid #ccc;
-    font-size: 14px;
+    font-size: 15px;
     outline: none;
     transition: border 0.2s;
 }
@@ -80,7 +120,7 @@ input[readonly] {
     background: #f3f3f3;
 }
 
-/* Buttons */
+/* Buttons (Calculate & Reset) */
 button {
     width: 45%;
     padding: 12px;
@@ -105,7 +145,6 @@ button {
     background: linear-gradient(to right, #ff416c, #ff4b2b);
 }
 
-/* Hover effect */
 button:hover {
     transform: scale(1.03);
     box-shadow: 0px 6px 12px rgba(0,0,0,0.3);
@@ -124,45 +163,11 @@ h2, h3 {
     }
 
     .row input {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     button {
         font-size: 13px;
         padding: 12px;
     }
-}
-/* Top navigation buttons */
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 15px;
-}
-
-.nav-btn {
-    padding: 12px 30px;
-    border: none;
-    border-radius: 30px;
-    font-size: 15px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    box-shadow: 0px 5px 12px rgba(0,0,0,0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-/* TOP button color */
-.top-btn {
-    background: linear-gradient(to right, #36d1dc, #5b86e5);
-}
-
-/* PANT button color */
-.pant-btn {
-    background: linear-gradient(to right, #ff9966, #ff5e62);
-}
-
-.nav-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 7px 15px rgba(0,0,0,0.4);
 }
