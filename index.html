@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Measurement App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Cloth Measurement App</h1>
+    </div>
+
+    <div class="buttons">
+        <button class="nav-btn top-btn" onclick="showTop()">TOP</button>
+        <button class="nav-btn pant-btn" onclick="showPant()">PANT</button>
+    </div>
+
+
+    <!-- Top Page -->
+    <div id="topPage" class="page">
+        <h2>Top Measurement</h2>
+
+        <div class="row"><label>HEIGHT:</label><input type="number" id="height"></div>
+        <div class="row"><label>CHEST:</label><input type="number" id="chest"></div>
+        <div class="row"><label>SHOULDER:</label><input type="number" id="shoulder"></div>
+        <div class="row"><label>WAIST:</label><input type="number" id="waist"></div>
+        <div class="row"><label>SEAT:</label><input type="number" id="seat"></div>
+
+        <button class="calculate-btn" onclick="calculateTop()">CALCULATE</button>
+        <button class="reset-btn" onclick="resetTop()">RESET</button>
+
+    </div>
+
+    <!-- Result Page -->
+    <div id="resultPage" class="page">
+        <h2>Entered Measurements</h2>
+
+        <div class="row"><label>HEIGHT:</label><input type="text" id="rHeight" readonly></div>
+        <div class="row"><label>CHEST:</label><input type="text" id="rChest" readonly></div>
+        <div class="row"><label>SHOULDER:</label><input type="text" id="rShoulder" readonly></div>
+        <div class="row"><label>WAIST:</label><input type="text" id="rWaist" readonly></div>
+        <div class="row"><label>SEAT:</label><input type="text" id="rSeat" readonly></div>
+
+        <h3>TOP CALCULATED MEASUREMENT</h3>
+
+        <div class="row"><label>HEIGHT:</label><input type="text" id="cHeight" readonly></div>
+        <div class="row"><label>CHEST:</label><input type="text" id="cChest" readonly></div>
+        <div class="row"><label>SHOULDER:</label><input type="text" id="cShoulder" readonly></div>
+        <div class="row"><label>CENTRE:</label><input type="text" id="cCentre" readonly></div>
+        <div class="row"><label>XY:</label><input type="text" id="cXY" readonly></div>
+        <div class="row"><label>WASTE LINE:</label><input type="text" id="cWasteLine" readonly></div>
+        <div class="row"><label>SEAT LINE:</label><input type="text" id="cSeatLine" readonly></div>
+        <div class="row"><label>CHEST:</label><input type="text" id="cChest2" readonly></div>
+        <div class="row"><label>WAIST:</label><input type="text" id="cWaist" readonly></div>
+        <div class="row"><label>SEAT:</label><input type="text" id="cSeat2" readonly></div>
+        <div class="row"><label>BOTTOM:</label><input type="text" id="cBottomTop" readonly></div>
+
+
+    </div>
+    <!-- Pant Measurement Page -->
+    <div id="pantPage" class="page">
+        <h2>Pant Measurement</h2>
+
+        <div class="row"><label>HEIGHT:</label><input type="number" id="pHeight"></div>
+        <div class="row"><label>HIP:</label><input type="number" id="pHip"></div>
+        <div class="row"><label>SEAT:</label><input type="number" id="pSeat"></div>
+        <div class="row"><label>KNEE:</label><input type="number" id="pKnee"></div>
+        <div class="row"><label>BOTTOM:</label><input type="number" id="pBottom"></div>
+
+        <button class="calculate-btn" onclick="calculatePant()">CALCULATE</button>
+        <button class="reset-btn" onclick="resetPant()">RESET</button>
+
+    </div>
+    <!-- Pant Result Page -->
+    <div id="pantResultPage" class="page">
+        <h2>Entered Pant Measurements</h2>
+
+        <div class="row"><label>HEIGHT:</label><input type="text" id="rpHeight" readonly></div>
+        <div class="row"><label>HIP:</label><input type="text" id="rpHip" readonly></div>
+        <div class="row"><label>SEAT:</label><input type="text" id="rpSeat" readonly></div>
+        <div class="row"><label>KNEE:</label><input type="text" id="rpKnee" readonly></div>
+        <div class="row"><label>BOTTOM:</label><input type="text" id="rpBottom" readonly></div>
+
+        <h3>PANT CALCULATED MEASUREMENT</h3>
+
+        <div class="row"><label>HEIGHT:</label><input type="text" id="pcHeight" readonly></div>
+        <div class="row"><label>SEAT 1:</label><input type="text" id="pcSeat1" readonly></div>
+        <div class="row"><label>SEAT 2:</label><input type="text" id="pcSeat2" readonly></div>
+        <div class="row"><label>SEAT 3:</label><input type="text" id="pcSeat3" readonly></div>
+        <div class="row"><label>SEAT 4:</label><input type="text" id="pcSeat4" readonly></div>
+        <div class="row"><label>KNEE:</label><input type="text" id="pcKnee" readonly></div>
+        <div class="row"><label>BOTTOM:</label><input type="text" id="pcBottom" readonly></div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
